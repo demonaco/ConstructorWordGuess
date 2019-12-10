@@ -5,16 +5,39 @@ var prompt = require('prompt');
 
 var correct = 
 
-var guess = process.argv[3]
 
 var guesses = 10
 
-var characterGuess = function Letter(guess, boolean, answer, character) {
-    this.guess = "",
-        this.boolean = true,
-        this.answer = function () {
-            return this.guess
+function startover(characterguess){
+};
+
+var characterGuess = function Letter(guess, letter, character, answer) {
+    this.guess = process.argv[3],
+        this.letter = false,
+        this.character = function () {
+            for (var i = 0; i < array.length; i++)
+            if (this.guess === array[i]) {
+                this.letter = true;
+                console.log(this.letter);
+            return (this.guess);
+        } else {
+            this.letter = false;
+            guesses--;
+            if (guesses === 0) {
+                console.log("Sorry you lost the game!")
+                startover();
+            } 
         }
+    }
+     }
+     startover();
+
+    letter.prototype.toString = function() {
+        var correct = "Correct " + this.guess;
+
+        if this.letter = 
+    }
+
     this.character = function () {
         if (this.guess === correct)
             this.boolean = true;
